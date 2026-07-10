@@ -27,15 +27,15 @@ One application of MorphPy is the analysis of annual disturbance layers stacked 
 
 | Code | Class       | Description                                 |
 | ---- | ----------- | ------------------------------------------- |
-| 1    | OUTSIDE     | Background / non-object voxels              |
-| 2    | MASS        | Fully enclosed interior voxels              |
+| 1    | OUTSIDE     | Background voxels coded 0 / non-feature voxels|
+| 2    | MASS        | Interior voxels completely surrounded on all six sides by neighbouring feature voxels, representing the core of 3D object|
 | 3    | SKIN        | Boundary voxels adjacent to MASS            |
-| 4    | CRUMB       | Small isolated objects without MASS or SKIN |
-| 5    | CIRCUIT     | Looping or unresolved connectors            |
-| 6    | ANTENNA     | Branch-like protrusions attached at one end |
-| 7    | BOND        | Bridges linking distinct MASS regions       |
-| 8    | VOID-VOLUME | Internal enclosed cavity                    |
-| 9    | VOID        | Boundary surrounding VOID-VOLUME            |
+| 4    | CRUMB       | Small isolated objects without MASS or connected to other feature voxels|
+| 5    | CIRCUIT     | Connector voxels forming a closed loop by linking a MASS back to itself|
+| 6    | ANTENNA     | Connector voxels attached to a MASS at a single point, forming protrusions|
+| 7    | BOND        | Connector voxels linking two or more separate MASS clusters|
+| 8    | VOID-VOLUME | Fully enclosed empty voxels within the feature voxels |
+| 9    | VOID        | Voxels representing the internal boundary of an empty space (VOID - VOLUME) located inside the object|
 
 ---
 
