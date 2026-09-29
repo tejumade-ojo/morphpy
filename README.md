@@ -82,14 +82,18 @@ pip install -r requirements.txt
 
 ## Quick Start
 
+### 1. Load example data
+
 ```python
 from Demodata import demo_data
 from morph3d import morph3d
 
-cube = demo_data()
+data = demo_data()
+
+print(data.shape)
 
 result = morph3d(
-    DATACUBE=cube,
+    DATACUBE=data,
     VERBOSE=True,
     PLOT=True,
     FINALPLOT=True
@@ -112,41 +116,41 @@ Master of Science, York University
 
 ## Authors
 
-### Original 3D Morphology Framework (R)
-
-Dr. Tarmo K. Remmel  
+**Ojo, T. A., & Remmel, T. K.**  
 Department of Geography  
-York University
-
-### MorphPy (Python)
-
-Tejumade A. Ojo  
-MSc Researcher  
 Faculty of Environmental and Urban Change  
 York University
 
 ## Citation
 
-If you use MorphPy in academic research, publications, or derived analyses, please cite both the software and the original methodology:
+If you use MorphPy in your research, please cite the software:
 
-Ojo, T. A. (2026).
-*Comparing Boreal Forest Regeneration Structures Between Harvesting and Wildfire Disturbance with 3D Morphology.*
-Master's thesis, York University.
-
-Repository:
+Ojo, T. A., & Remmel, T. K. (2026). *MorphPy: 3D morphological segmentation for binary voxel data* (Version 1.0.0) [Computer software].  
 https://github.com/tejumade-ojo/morphpy
 
-Remmel, T. K. (2022).
-*Extending Morphological Pattern Segmentation to 3D Voxels.*
-Landscape Ecology.
+### Recommended References
+
+Users applying MorphPy in academic research are also encouraged to cite the associated thesis and relevant methodological literature:
+
+Ojo, T. A. (2026).  
+*Comparing Boreal Forest Regeneration Structures Between Harvesting and Wildfire Disturbance with 3D Morphology.*  
+Master's thesis, York University.
+
+Remmel, T. K. (2022).  
+*Extending Morphological Pattern Segmentation to 3D Voxels.*  
+Landscape Ecology.  
 https://doi.org/10.1007/s10980-021-01384-7
 
-## License and Use
+## License
 
-MorphPy is made available for academic, research, and educational use. Please refer to the `NOTICE.md` file for the terms governing use, attribution, modification, and redistribution.
+MorphPy is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+See the `LICENSE` file for the full license terms.
+
+https://www.gnu.org/licenses/gpl-3.0.html
 
 ## Acknowledgements
 
-MorphPy builds upon the three-dimensional morphological framework originally developed by Dr. Tarmo K. Remmel. The Python implementation extends this framework to support reproducible scientific workflows and broader accessibility within the geospatial research community.
+MorphPy builds upon the three-dimensional morphological framework originally developed by Prof. Tarmo K. Remmel. The Python implementation extends this framework to support reproducible scientific workflows and broader accessibility within the geospatial research community.
 
 A machine-readable citation file (CITATION.cff) is included in this repository.
